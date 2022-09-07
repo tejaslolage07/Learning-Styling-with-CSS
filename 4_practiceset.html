@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice set</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Rubik:wght@300&display=swap"
+            rel="stylesheet">
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline-block;
+            margin: 25px 10px;
+            font-size: 20px;
+        }
+        nav ul li a{
+            color: white;
+            /* To make the underline disappear: */
+            text-decoration: none;  
+        }
+        .top{
+            height: 70px;
+            background-color: black;
+            color: white;
+        }
+        .left{
+            /* This ensures that we can set the width and height of the block and it will obey it */
+            display: inline-block;
+            background-color: green;
+            color: white;
+            height: 100vh;
+            width:50%;
+        }
+        .right{
+            /* This ensures that we can set the width and height of the block and it will obey it */
+            display: inline-block;
+            background-color: blue;
+            color: white;
+            height: 100vh;
+            width:50%;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Baloo Bhai 2', cursive;
+            text-transform: uppercase;
+        }
+    </style>
+    </head>
+    <body>
+        <nav class="top">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="left">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            non suscipit officia veniam doloribus quo?
+            <!-- In CSS, the space between </div> and <div> tags is also printed on the website. Hence, to avoid any whitespace to be 
+            printed on the browser, we have to write </div><div> and the 50% 50% blocks can work. -->
+        </div><div class="right">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
+            aperiam corrupti alias officiis illum optio, numquam sit voluptatum
+            vitae repellat enim, praesentium quidem?
+        </div><footer>
+            Copyright &copy; Practice set 4. All rights reserved.
+        </footer>
+    </body>
+</html>
