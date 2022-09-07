@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text properties</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+            rel="stylesheet">
+        <style>
+        .container{
+            background-color: red;
+            color: white;
+            width: 314px;
+            height: 425px;
+            text-align: center;
+            /* text-decoration: underline; Hint: Checkout MDN by hovering mouse over text-decoration and find out about more values of this element
+            also, underline must not be used in styling because it gives a feel of being a url which is not expected by the user. */
+            text-transform: capitalize; 
+            line-height: 30px; /* This sets the line gap between two lines. */
+            /* display: inline; */
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;   /* You have to use quotes for specifying specifiers which have spaces between them */
+            /* Also, the comma separated different fonts ensure that if a font is not available on a browser, the next font can be tried and so on. */
+        }
+        .container2{
+            background-color: blue;
+            color: white;
+            width: 314px;
+            height: 425px;
+            text-align: center;
+            text-transform: capitalize; 
+            line-height: 30px; /* This sets the line gap between two lines. */
+            font-size: 24px;
+            font-family: 'Rubik', sans-serif;
+        }
+        /* We can also make use of google fonts for designing websites. Just search google fonts in browser and select your font.
+            Then, you can copy paste the link in your code and use the CSS font-family name specified there to use the font. */
+        /* Websafe fonts are the fonts that are universally installed on all browsers. */
+
+    </style>
+    </head>
+    <body>
+        <div class="container">This is a nice boy Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. At obcaecati ipsa quam hic impedit
+            natus earum asperiores dolore fugiat quo nemo nihil blanditiis
+            soluta laborum, ipsum nam pariatur officiis non veritatis quasi
+            deleniti accusantium.</div>
+        <div class="container2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+            cum deleniti corporis iusto ex obcaecati ducimus maxime nulla ipsam
+            voluptas!
+        </div>
+    </body>
+</html>

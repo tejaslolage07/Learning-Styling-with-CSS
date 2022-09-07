@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fonts and Display</title>
+    <!-- There are 4 values for the display tag which are:
+        1. display: inline -> Takes only the space required by the element. No linebreaks before and after. Setting width and height is not allowed here.
+                            and top and bottom margin/padding is not allowed. However, horizontal margin/padding can be set. 
+        2. display: block (default) -> takes full space available in width and leaves a newline before and after the element.
+        3. display: inline-block -> similar to inline, but can allow setting height, width, margin and padding. Elements can sit next to each other here as well.
+        4. display: none -> the element is removed from the document flow. It's space is not blocked.
+        5. visibility: hidden: the object will not be visible anymore, but still it will occupy its space.      -->
+
     <style>
         .box1{
             width: 40px;
             height: 30px;
             background-color: red;
+            display: inline;
         }
         .box2{
             width: 40px;
@@ -20,10 +29,10 @@
 </head>
 <body>
     <div class="box1">
-
+        Lorem, ipsum dolor.
     </div>
     <div class="box2">
-
+        Lorem ipsum dolor sit.
     </div>
 </body>
 </html>
