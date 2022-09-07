@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS selectors</title>
+        <style>
+            h1{         /* This is known as element selector method. This way, all the elements of a specific name are applied this style. */
+                color: red;
+            }   /* Here, div#unique will search for a div id="unique" and apply to that. */
+            div#unique{ /* This is known as id selector method. This way, a unique element of an html page can be applied this style. */
+                background-color: greenyellow;
+            }
+            .blue{      /* This is known as class selector method. This way, all the elements of a specific class are applied this style.*/
+                background-color: purple;   
+                color: white;
+                border: 2px solid black;
+            }
+            h2,h3,h4,h5{
+                background-color: hotpink;
+                color:black;
+                border: 1px solid deeppink;
+            }
+            /* Comments in CSS are written inside / *  * / while comments in html are written inside <!-- --> */
+        </style>
+    </head>
+    <body>
+        <div id="unique">
+            <h1>
+                This is my CSS selector page
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+                officiis cumque illum. Vitae sapiente consectetur officia ullam
+                eveniet soluta assumenda ratione nesciunt nobis harum? Itaque
+                impedit possimus vel. Nihil optio porro iusto at dolorum.
+            </p>
+            <h1>
+                This is another h1
+            </h1>
+            <div class="blue">
+                This is a div with blue class.
+            </div>
+            <div id="divdiv">
+                <h2>
+                    This is h2 tag
+                </h2>
+                <h3>
+                    This is h3 tag
+                </h3>
+                <h4>
+                    This is h4 tag
+                </h4>
+                <h5>
+                    This is h5 tag
+                </h5>
+            </div>
+        </div>
+    </body>
+</html>
