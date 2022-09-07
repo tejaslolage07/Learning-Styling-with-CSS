@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>html collapse</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            /*  Both the elements having the same margin won't have the same margin values won't have double the space between them.
+                This is because the browser will think that both the elements want the some distance between each other, so I will
+                give the greater of the two margin as the distance so that both's requirements will be satisfied. */
+            .box{
+                background-color: red;
+                margin: 20px;
+                height: 30px;   /* total height = box height + 20 + 20 + 30 + 30 = box height + 100 */
+            }
+            .box2{
+                /* box-sizing: content-box; Whatever height and width I am giving, it should be exclusive of the padding and border. Margin is NOT INCLUDED */
+                box-sizing: border-box; /* Whatever height and width I am giving, it should be inclusive of the padding and border. Margin is NOT INCLUDED */
+                background-color: aqua;
+                margin: 20px;
+                height: 30px;
+            }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure aut
+            eligendi alias minus! Suscipit accusantium excepturi earum saepe,
+            aperiam doloribus facilis iste, quisquam aliquid debitis commodi
+            fugiat labore quae animi accusamus at porro blanditiis.
+        </div>
+        <div class="box2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+            tenetur dicta. Maiores consequatur voluptatum enim voluptas fuga
+            totam? At in cupiditate non soluta? Blanditiis dolor dolorem,
+            cupiditate rerum nostrum quia, animi at deserunt eligendi tempore
+            sequi. Possimus quisquam culpa necessitatibus esse minus error.
+        </div>
+    </body>
+</html>

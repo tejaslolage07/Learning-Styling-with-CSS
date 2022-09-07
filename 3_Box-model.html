@@ -1,0 +1,61 @@
+<!-- The following is the way the box model is structured in CSS:
+    
+        -------------------------------------------------------------------------------------------------
+        |                                            Margin                                             |
+        |    ---------------------------------------------------------------------------------------    |
+        |    |                                       Border                                        |    |
+        |    |    -----------------------------------------------------------------------------    |    |
+        |    |    |                                  Padding                                  |    |    |
+        |    |    |    -------------------------------------------------------------------    |    |    |
+        |    |    |    |                             Content                             |    |    |    |
+        |    |    |    -------------------------------------------------------------------    |    |    |
+        |    |    |                                                                           |    |    |
+        |    |    -----------------------------------------------------------------------------    |    |
+        |    |                                                                                     |    |
+        |    ---------------------------------------------------------------------------------------    |
+        |                                                                                               |
+        -------------------------------------------------------------------------------------------------
+
+        Now, the total height of a container = height + top/bottom padding + top/bottom border + top/bottom margin
+    -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box model</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                height: 244px;
+                width: 244px;
+                background: red;
+                color: white;
+                /* margin: 2px; */
+                /* margin-top: 2px; */
+                /* margin: 2px 2px 3px 4px; top right bottom left */ 
+                margin: 2px 2px; /* top-bottom left-right */
+                
+                /* can use these methods for border or padding too */
+                border: 2px;
+                border-style: solid;
+                border-color: blue;
+                border-radius: 3px;
+
+                padding: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            saepe temporibus aperiam fuga eligendi quisquam corporis ipsa omnis,
+            perspiciatis sunt rem vero tempora, ex aspernatur sed ad labore
+            laudantium! Enim facere tempore harum odit.
+        </div>
+    </body>
+</html>
