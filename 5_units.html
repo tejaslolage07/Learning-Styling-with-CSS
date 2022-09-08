@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Units</title>
+        <style>
+        /* Responsible webpages are those which we can view correctly on most of the devices. */
+        /* There are more units for describing size other than px:
+            1. em - unit relative to the parent font size 
+            2. rem - unit relative to the root font size
+            3. vw - unit relative to 1% viewport width 
+            4. vh - unit relative to 1% viewport height 
+            5. % - unit relative to 1% of the parent element */
+        html{
+            /* font-size: 16px; */
+            /* Here, we can change the root font size for rem to take effect. 16px is default. */
+        }
+        .container{
+            /* font-size: 20px; */
+        }
+        .box{
+            /* font-size: 3em; */
+            /* This element will take thrice the parent font size which is 32px*3 = 3em = 96px */
+        }
+        .con{
+            /* font-size: 3rem; */
+            /* This will make the size equal to 3 times the root font size which is 16px*3 = 3rem = 48px */
+        }
+        .box2{
+            background-color: aqua;
+            width: 334px;
+            width: 50vw;
+            /* This can make the div 50% the size of whatever device the user is using. */
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            This is a paragraph
+            <div class="box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Officia
+                ipsum error, doloremque consectetur explicabo vero neque.
+                Repellendus vero blanditiis ipsum animi laboriosam commodi sint.
+                Obcaecati, beatae tempora? Voluptatem distinctio illum odio
+                officiis?
+            </div>
+            <div class="box2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Mollitia, nesciunt porro? Nisi consequatur est magnam! Omnis
+                nihil dignissimos earum commodi.
+            </div>
+        </div>
+        <div class="con">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
+            cum saepe nihil nulla officia fuga nobis ducimus quas atque maxime.
+        </div>
+    </body>
+</html>

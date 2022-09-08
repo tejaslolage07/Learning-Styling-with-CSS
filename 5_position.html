@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Position</title>
+        <style>
+            /* The position tag has the following possible values: 
+            1. static: The default position => top/bottom/left/right/z-index does not have any effect 
+            2. relative: top/bottom/left/right/z-index now works. Otherwise, the element is in the flow of the document.
+            3. absolute: The element is removed from the flow and is relatively positioned to its first non-static ancestor. top/bottom/left/right/z-index works.
+            4. fixed: Just like absolute, except that the element is placed relative to the browser window.
+            5. sticky: The element is positioned according to the user's scroll position. */
+
+            *{
+            margin: 0;
+            padding: 0;
+        }
+        li a{
+            display: inline;
+            text-decoration: none;
+            color: red;
+        }
+        li{
+            display: inline;
+            /* List style is the how the list elements will have the bullets/numbering/indexing. */
+            /* List style takes 3 arguments: list-style type list-style-position list-style-image */
+            /* however, display: inline will disable the list-style. */
+            list-style: circle inside ;
+            /* usage: list-style: circle inside url("tejas.png") */
+            /* list-style-position decides where the list styles appear. inside means they will appear inside the container. 
+            outside means outside the container and so on. */
+        }
+        nav{
+            background-color: greenyellow;
+            color: white;
+            height: 10vh;
+        }
+        .container{
+            text-decoration: none;
+        }
+        .containerleft{
+            background-color: blue;
+            width: 25vw;
+            height: 0px;
+            display: inline-block;
+        }
+        .container2{
+            background-color: bisque;
+            width: 50vw;
+            height: 500vh;
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .containerinside{
+            background-color: bisque;
+            text-align: center;
+            display: inline-block;
+        }
+        .container3{
+            background-color: red;
+            color: white;
+            text-align: left;
+            display: inline-block;
+            position: relative;
+            top: -50px;
+            /* bottom: 44px; */
+            left: 637px;
+            width: 30px;
+            height: 20px;
+        }
+        .container4{
+            background-color: blue;
+            color: white;
+            text-align: left;
+            display: inline-block;
+            width: 50%;
+            /* position: relative;
+            top: 20px;
+            bottom: 20px; */
+            /* position: relative; -- makes the element position itself according to its parent element. */
+            /* position: absolute; -- makes other elements behave as if this element does not exist. */
+            position: fixed;
+            /* position: sticky; */
+            bottom: 0px;
+            right: 0px;
+            /* The z-index property determines whether an element must show above another element or below it. */
+            /* Higher z-index elements show up above other elements. */
+            /* The z-index can be considered as the z-axis coordinate of an element (out of the screen is positive) 
+            which determines where an element will be placed on the z-axis. */
+            z-index: 1; 
+        }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="containerleft">
+        </div><div class="container2">
+            <div class="containerinside">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                veniam aspernatur perferendis sapiente quos facere
+                exercitationem
+                maiores voluptatem, ea eos, magni commodi ullam cupiditate eius!
+                Quaerat sint perspiciatis, nobis fugit alias adipisci rem dolor.
+            </div>
+            <div class="container3">
+                Lorem, ipsum dolor.
+            </div>
+            <div class="container4">
+                Chat with this bot:
+            </div>
+        </div>
+    </body>
+</html>
