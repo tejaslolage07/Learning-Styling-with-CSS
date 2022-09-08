@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        /* The float property can shift an element towards left or right. */
+        /* With the help of clear property you can say that clear my right/left/both of any floats. */
+        /* The CSS flexbox aims at providing a better way to layout, align and distribute space among items in a container */
+        /* display: flex initializes a flexbox for the container */
+        /* Refer to url('Flexbox.jpg') for detailed diagram of Flexbox. */
+        /* Flex direction is the property that defines the direction towards which items are laid.
+            Can be row, row-reverse, column, column-reverse */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            /* Some of the properties of flexbox that applies to the flexbox container are: */
+            /* 1. flex-direction - property can render the items in row/row-reverse/column/column-reverse direction */
+            /* 2. flex-wrap - property can wrap, nowrap, wrap-reverse items according to the browser window size. 
+                This is just like wrapping text except here you are wrapping containers. */
+            /* 3. justify-content - can define the content position along the main axis. This can be used to center/left/right stuff
+                according to the flexbox container. */
+            /* 4. align-items - defines alignment along the cross axis. This can be used to center/top/bottom stuff 
+                according to the flexbox container. */
+            /* 5. align-content - aligns a flex container's lines when there is extra space in the cross axis. 
+                Normally, if your flexbox is large vertically, the wrapping can leave spaces between the items.
+                To remove this space, you can align-content: center to group the items together in the center and make them behave like single entity. */
+
+            background-color: aquamarine;
+            height: 355vh;
+            display: flex;
+            flex-direction: row;
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            flex-wrap: wrap;
+            /* Best way to center items using CSS: */
+            justify-content: center; /* This is for left-right */
+            align-items: flex-start; /* This is for top-bottom */
+            /* align-content: center; */
+        }
+        /* Some flexbox properties apply to the flex items also. Some of them are: */
+        /* 1. order: controls the order in which the items appear in the flex container */
+        /* 2. align-self: allows default alignment to be overridden for the individual flex items */
+        /* 3. self-grow: defines ability for a flex item to grow. */
+        /* 4. self-shrink: defines ability for a flex item to shrink relative to the rest of the flex items. Is useful when items
+            are overflowing and you want to shrink stuff. */
+        .box1{
+            height: 200px;
+            width: 200px;
+            /* float: left; */
+            background-color: blue;
+            border: 2px solid black;
+            position: sticky;
+            top:15vh;
+            /* This will make the item appear 2nd in the row of flex items. Default value for all items is 0. Hence, in this case,
+                the object will appear last because 0<=0<=0<=2 */
+            order: 2;
+            /* order: -1; */
+
+            /* This will make the thing align at center without obeying the original flex box rule */
+            align-self: center;
+            /* This will make the item grow horizontally to 3 times length */
+            flex-grow: 3;
+
+        }
+        .box2{
+            height: 200px;
+            width: 200px;
+            /* clear: both;
+            float: right; */
+            background-color: red;
+            border: 2px solid black;
+            position: sticky;
+            top:15vh;
+
+        }
+        .box3{
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+            border: 2px solid black;
+            position: sticky;
+            top:15vh;
+        }
+        .box4{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: greenyellow;
+            position: sticky;
+            top:15vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+</body>
+</html>

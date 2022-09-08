@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 6</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background-color: darkgray;
+            /* This ensures height and width specified are inclusive of the padding+border+margin */
+        }
+        ul{
+            display: flex;
+            box-sizing: border-box;
+            padding: 2vh 0;
+            height: 7vh;
+            align-items: center;
+            justify-content: end;
+        }
+        li{
+            padding: 0 1%;
+            list-style: none;
+        }
+        li a{
+            text-decoration: none;
+        }
+        .bgimg{
+            background-color: brown;
+            height: auto;
+            height: 33vh;
+            width: 100vw;
+        }
+        .mastercontainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+        }
+        .container1, .container2, .container3{
+            background-color: aqua;
+            border: 2px solid black;
+            height: 40vh;
+            width: 40vh;
+            margin: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bgimg"></div>
+    <div class="mastercontainer">
+        <div class="container1"></div>
+        <div class="container2"></div>
+        <div class="container3"></div>
+    </div>
+</body>
+</html>
