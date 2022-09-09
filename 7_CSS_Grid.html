@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /* Declaration: display: grid */
+        /* In CSS grid, all children automatically become grid items. */
+        /* 1. grid-column-gap - used to adjust space between the columns of a css grid. */
+        /* 2. grid-row-gap - used to adjust space between the rows of a css grid. */
+        /* 3. grid-gap - used to adjust space for both rows and columns of a css grid. */
+        /* 4. grid-template-column - used to specify the space that a column will take in the grid. Same for rows in grid-template-rows*/
+        /* 5. grid-column - used for making an item take double/triple/etc space in the grid - used in specific item styling 
+            1 / 3 means start at 1 and end at 3. */
+
+        .container{
+            background-color: blueviolet;
+            height: 70vh;
+            display: grid;
+            row-gap: 20px;
+            column-gap: 10px;
+            /* grid-template-columns: 70px 70px 70px 70px; */
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto auto;
+            /* justify-content: center;
+            align-content: center; */
+        }
+        .item{
+            background-color: grey;
+            /* border: 2px solid red; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="grid-column: 1/3; grid-row: 1/ span 3" ><h4>1</h4></div>
+        <div class="item"><h4>2</h4></div>
+        <div class="item"><h4>3</h4></div>
+        <div class="item" style="grid-row: 2/span 2;"><h4>4</h4></div>
+        <div class="item"><h4>5</h4></div>
+        <div class="item"><h4>6</h4></div>
+        <div class="item"><h4>7</h4></div>
+        <div class="item"><h4>8</h4></div>
+    </div>
+</body>
+</html>
