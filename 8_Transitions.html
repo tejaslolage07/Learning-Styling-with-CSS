@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        /* Transition is used to change properties smoothly, over a given duration. */
+        /* transition-property - The property you want to transition */
+        /* transition-duration - Time for which you want to apply the transition */
+        /* transition-timing-function - How you want to apply the transition */
+        /* transition-delay - Specifies the delay for the transition */
+
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            width: 560px;
+            height: 690px;
+            /* transition-property: width height; */
+            /* transition-duration: 2s; */
+            /* transition-timing-function: ease-in;
+            transition-timing-function: linear; */
+            /* transition-timing-function: ease-in-out; */
+            /* transition-delay: 0.2s; */
+            transition: width 2s ease-in-out 0.2s, height 2s ease-in-out 0.2s;
+        }
+        img:hover{
+            width: 840px;
+            height: 1035px;
+        }
+    </style>
+</head>
+<body>
+    <div id="button">
+        <button type="button" class="btn btn-primary">Toggle</button>
+    </div>
+    <div class="container">
+        <img id="myImg" src="https://source.unsplash.com/560x690/?boobs">
+    </div>
+    <script>
+        button.addEventListener("click", ()=>{
+            if(myImg.style.width === '840px' && myImg.style.height === '1035px'){
+                myImg.style.height = '690px'
+                myImg.style.width = '560px'
+            }
+            else{
+                myImg.style.width = '840px'
+                myImg.style.height = '1035px'
+            }
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

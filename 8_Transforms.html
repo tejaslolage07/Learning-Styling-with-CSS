@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transforms</title>
+        <style>
+            /* Transforms are said to happen to an object when it moves/changes orientation/rotates etc. There are 2D transforms, 3D transforms and more. */
+            /* you can use transform: translate(), rotate(), scaleX(), scaleY(), skew(), matrix(), scale() */
+            /* some 3D transform methods - rotateX(), rotateY(), rotateZ() */
+            /* transform: translate(width) will shift the object right by 'width' */
+            /* scale() will scale the object. can take x, y, z parameters. */
+            /* skew() will make the object appear as though it is tilted.*/
+            /* matrix(a,b,c,d,tx,ty) a=scaleX, b=scaleY, c=skewX, d=skewY and tx=translateX and ty=translateY */
+            .container{
+                background-color: red;
+                height: 20vh;
+                
+            }
+            .box{
+                border: 2px solid black;
+                display: inline-block;
+                /* transform: translate(20vw, 10vh) rotate(0.1turn) rotate(45deg) scale(0.6, 2);  */
+                transform: translate(20vw, 7vh) rotateX(20deg) rotateY(10deg) rotateZ(5deg); 
+                /* transform origin will help to change the point of translation */
+                transform-origin: 0;
+                /* transform: skew(20deg, 10deg); */
+                /* transform: matrix(); */
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <!-- <img src="Sunny-Leone.jpg"> -->
+                <img src="https://source.unsplash.com/560x690/?dress,woman">
+            </div>
+        </div>
+    </body>
+</html>

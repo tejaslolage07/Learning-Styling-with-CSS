@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animations</title>
+        <style>
+        /* Animations are used to animate CSS properties with more control. */
+        /* We can simply write: 
+            @keyframes Tejas{
+                from{width: 20px;}
+                to{width: 21px;}
+            } 
+            to add transitions and animations in CSS. */
+        
+        /* We have: 
+        1. animation-name: name of the animation 
+        2. animation-duration: How long does the animation last
+        3. animation-timing-function: Determines the speed curve of the animation
+        4. animation-delay: Delay before the animation
+        5. animation-iteration-count: Number of times the animation runs
+        6. animation-direction: Specifies the direction of the animation
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            /* width: 462px; */
+            background-color: blue;
+            color: white;
+            /* height: 600px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* animation-name: animate;
+            animation-duration: 1s;
+            animation-delay: 0;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out; */
+            /* animation: animate 1s ease-in-out 0 infinite alternate; */
+        }
+        img{
+            animation: animateboobs 1.5s ease-in 0s 1 alternate forwards;
+        }
+        @keyframes animate{
+            from{
+                height:10px;
+                width:auto;
+            }
+            to{
+                width: auto;
+                height: 725px;
+            }
+        }
+        /* We can use percentage values to indicate what should happen when certain percentage of animation is complete. */
+        @keyframes animateboobs{
+            0%{
+                height:10px;
+                width:auto;
+            }
+            50%{
+                width: auto;
+                height: 500px;
+            }
+            100%{
+                width: auto;
+                height: 725px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- <img id="myImg" src="https://source.unsplash.com/560x690/?boobs"> -->
+            <div class="box">
+                <!-- This is some box -->
+                <img src="Sunny-Leone.jpg" height="100px" width="auto">
+            </div>
+        </div>
+    </body>
+</html>
